@@ -66,4 +66,15 @@ if [ "$ACCELERATE" == "True" ]; then
         "$ACCELERATE_PATH" launch --num_cpu_threads_per_process=6 launch.py "$@"
     else
         echo "Accelerate not found, running normally"
-        "$PYTHON" la
+        "$PYTHON" launch.py "$@"
+    fi
+else
+    "$PYTHON" launch.py "$@"
+fi
+
+# Restart handling
+if [ -f "$SD_WEBUI_RESTART" ]; then
+    exec "$0" "$@"
+fi
+
+echo "Launch finished."
