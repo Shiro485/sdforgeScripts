@@ -7,7 +7,7 @@ if [ -f "webui.settings.sh" ]; then
 fi
 
 # Default values
-: "${PYTHON:=python3}"
+: "${PYTHON:=python}"
 : "${VENV_DIR:=$(dirname "$0")/venv}"
 : "${SD_WEBUI_RESTART:=tmp/restart}"
 : "${ERROR_REPORTING:=FALSE}"

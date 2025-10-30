@@ -8,4 +8,4 @@ source "$(dirname "$0")/environment.sh"
 cd "$(dirname "$0")/webui" || exit 1
 
 # Run the user startup script
-bash ./webui-user.sh
+exec ./webui-user.sh

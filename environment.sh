@@ -4,7 +4,7 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/system" && pwd)"
 
 # Prepend paths
-export PATH="$DIR/git/bin:$DIR/python:$DIR/python/Scripts:$PATH"
+export PATH="$DIR/git/bin:$DIR/python/Python-3.10.6:$DIR/python/Python-3.10.6/Scripts:$PATH"
 
 # Set environment variables
 export PY_LIBS="$DIR/python/Scripts/Lib:$DIR/python/Scripts/Lib/site-packages"
